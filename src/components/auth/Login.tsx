@@ -5,7 +5,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:5000/auth/google';
+    window.location.href = 'https://inventory-management-backend-s5o3.onrender.com/auth/google';
   };
 
   useEffect(() => {

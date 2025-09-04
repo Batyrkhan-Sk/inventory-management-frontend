@@ -29,7 +29,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   };
 
   try {
-    const response = await fetch(`http://localhost:5000/api/inventories/${inventoryId}/items`, {
+    const response = await fetch(`https://inventory-management-backend-s5o3.onrender.com/api/inventories/${inventoryId}/items`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

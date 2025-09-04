@@ -24,7 +24,7 @@ const ItemsPage: React.FC = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/inventories/${inventoryId}/items`,
+          `https://inventory-management-backend-s5o3.onrender.com/api/inventories/${inventoryId}/items`,
           {
             headers: {
               "Content-Type": "application/json",

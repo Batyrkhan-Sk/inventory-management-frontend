@@ -17,7 +17,7 @@ function InventoryPage() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/inventories", {
+    fetch("https://inventory-management-backend-s5o3.onrender.com/api/inventories", {
       headers: getAuthHeaders(),
     })
       .then((res) => res.json())
@@ -32,7 +32,7 @@ function InventoryPage() {
   imageUrl?: string;
 }) => {
   try {
-    const res = await fetch("http://localhost:5000/api/inventories", {
+    const res = await fetch("https://inventory-management-backend-s5o3.onrender.com/api/inventories", {
       method: "POST",
       headers: {
         ...getAuthHeaders(),

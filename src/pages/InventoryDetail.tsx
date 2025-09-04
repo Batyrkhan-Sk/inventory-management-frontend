@@ -14,7 +14,6 @@ function InventoryDetail() {
 
   const [inventory, setInventory] = useState<Inventory | null>(stateInventory || null);
 
-  // refactor (context maybe use)
   const handleEditInventory = (inventory: Inventory) => {
     navigate(`/inventory/${inventory.id}/edit`, { state: { inventory } });
   }
@@ -22,7 +21,7 @@ function InventoryDetail() {
   const handleDeleteInventory = async (inventoryId: string) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/inventories/${inventoryId}`, {
+      const response = await fetch(`https://inventory-management-backend-s5o3.onrender.com/api/inventories/${inventoryId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -42,7 +41,7 @@ function InventoryDetail() {
   useEffect(() => {
     if (!inventory) {
       const token = localStorage.getItem('token');
-      fetch(`http://localhost:5000/api/inventories/${id}`, {
+      fetch(`https://inventory-management-backend-s5o3.onrender.com/api/inventories/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
