@@ -1,0 +1,1 @@
+export const tabs = ["Items", "Chat", "Settings", "Custom ID", "Fields", "Access"];

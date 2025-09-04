@@ -5,3 +5,7 @@
   text-align: center;
 }
 
+body, h2 {
+  all: revert; 
+}
+
